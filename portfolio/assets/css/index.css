@@ -1,0 +1,59 @@
+/* Prevent horizontal scrolling for the entire page */
+body {
+  overflow-x: hidden;
+}
+/* Navigation Bar Background Color */
+.navbar {
+  background-color: #3498db; /* Blue color */
+}
+
+/* Body Background Color */
+.index{
+  background-color: #ecf0f1; /* Light grey color */
+}
+
+
+/* If the issue is caused by a specific container, adjust its width */
+.container.index {
+  max-width: 100%; /* Ensures the container doesn't exceed the viewport width */
+}
+.banner_inner .banner_content {
+  margin-bottom: 80px; /* Decrease the bottom margin as needed */
+}
+
+
+.home_banner_area {
+  margin-top: 90px; /* Adjust the value as needed */
+}
+/* Style the "Hire Me" button with light blue color */
+.primary_btn {
+  background-color: #7ebcff; /* Light blue color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Add rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-right: 10px; /* Add right margin for spacing between buttons */
+}
+
+/* Style the "Get CV" button with a darker shade of light blue */
+.primary_btn.tr-bg {
+  background-color: #5ea4e2; /* Darker shade of light blue */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Add rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Add hover effect to both buttons */
+.primary_btn:hover, .primary_btn.tr-bg:hover {
+  background-color: #5e9ad3; /* Darker shade on hover */
+}
+
+body.index {
+  font-family: Arial, sans-serif; /* Use a common font for better compatibility */
+  background-color: #f0f0f0; /* Set a light background color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}

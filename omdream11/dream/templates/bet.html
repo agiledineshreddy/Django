@@ -1,0 +1,34 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bet.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="bet">
+    <div class="nav">
+        <div class="navr1">
+            <i class="fa-regular fa-user"></i>
+            <p><i class="fa-solid fa-trophy"></i> DREAM11</p>
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-wallet"></i>
+        </div>
+        <div class="navr2">
+          <a href="#"><p class="navr2c"> <i class="fa-solid fa-baseball"></i> Cricket</p></a> 
+            <a href="#"><p class="navr2c"><i class="fa-solid fa-basketball"></i> Basketball</p></a> 
+            <a href="#"><p class="navr2c"><i class="fa-solid fa-baseball-bat-ball"></i> Baseball</p></a>
+        </div>
+
+    </div>
+    <div class="cricket">
+        <p class="teama">{{teama}}</p>
+        <p class="vs">VS</p>
+        <p class="teamb">{{teamb}}</p>
+    </div>
+</div>
+</body>
+</html>

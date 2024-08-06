@@ -1,0 +1,15 @@
+/* static/styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+header img {
+    height: 60px;
+}
+nav ul {
+    list-style-type: none;
+    float: right;
+}
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}

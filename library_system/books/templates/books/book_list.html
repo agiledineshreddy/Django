@@ -1,0 +1,20 @@
+<!-- books/templates/books/book_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Catalog</title>
+</head>
+<body>
+    <h1>Book List</h1>
+    <form action="{% url 'search_books' %}" method="get">
+        <input type="text" name="q" placeholder="Search books..." value="{{ request.GET.q }}">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }} - {% if book.available %} Available {% else %} Not Available {% endif %}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

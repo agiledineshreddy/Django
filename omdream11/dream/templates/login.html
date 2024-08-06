@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="lognav">
+            <span class="row1">
+                <a href=""><i class="fa-solid fa-arrow-left"></i></a>
+                <p>Login</p>
+                <a href=""><i class="fa-solid fa-question"></i></a>
+            </span>
+            <span class="row2">
+                <p>Let's get you started</p>
+            </span>
+        </div>
+        <div class="details">
+            <span class="mobile">
+                <span class="mob">
+                    <p class="mobile-logo"></p>
+                    <p class="num">+91<input id="input1" name="input1" type="text" maxlength="10" class="mobileinput" value="{{ ph }}" placeholder="Mobile Number" required></p>
+                    <span class="pass-span">
+                        <label for="pass">Password:</label>
+                        <input class="pass" type="password" id="input2" name="input2" maxlength="10" placeholder="Enter password" required>
+                    </span>
+                </span>
+                <span class="xicon">
+                    <i id="xicon" class="fa-regular fa-circle-xmark"></i>
+                </span>
+            </span>
+            <div class="submitd">
+                <input id="submitd" type="submit" style="background-color: green;" value="Login">
+            </div>
+            <p class="term">By continuing, I agree to Dream11's <a href="#">T&C</a></p>
+            <span class="row5">
+                <p>Not yet Registered? <a href="{% url 'register' %}" style="color: rgb(115, 66, 66);" class="cod-otlog">Register Here</a></p>
+            </span>
+        </div>
+    </form>
+    <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="lognav">
+        <span class="row1">
+       <a href=""> <i class="fa-solid fa-arrow-left"></i></a>
+       
+            <p>Register</p>
+      
+        <a href=""><i class="fa-solid fa-question"></i></a>
+    </span>
+    <span class="row2">
+        <p>Let's get you started</p>
+    </span>
+    </div>
+    <div class="details">
+        <span class="mobile">
+            <span class="mob">
+                <p class="mobile-logo"></p>
+            <p class="num">+91<input id="input1" type="[0-9]*" maxlength="10" class="mobileinput" placeholder="Mobile Number" onclick="mobile()" required>  </p>
+            <span class="pass-span">
+                 <label for="pass">password:</label>
+            <input class="pass" type="password" id="input2" maxlength="10" placeholder="Enter password" required>
+            </span>
+            </span>
+            <span class="xicon">
+                 <i id="xicon" class="fa-regular fa-circle-xmark"></i>
+            </span>
+        </span>
+        <div class="checkb">
+            <input id="checkb" type="checkbox">
+             <p>I certify that I am above 18 years</p>
+        </div>
+        <div class="submitd">
+            <input id="submitd" type="submit" disabled value="REGISTER">
+        </div>
+        <p class="term">By continuing, I agree to Dream11's <a href="#">T&C</a></p>
+        <span class="row5">
+        <p> Already Registered <a href="login.html" style="color: rgb(115, 66, 66);" class="cod-otlog"> Login </a></p>
+        </span>
+
+    </div>
+    
+    
+    <script src="register.js"></script>
+</body>
+</html>

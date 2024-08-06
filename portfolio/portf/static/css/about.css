@@ -1,0 +1,71 @@
+.navbar {
+  background-color: #3498db; /* Blue color */
+}/* Basic Reset */
+body, h1, h2, ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light grey background for the body */
+}
+
+header {
+  background-color: #3498db; /* Blue color for the header */
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .navbar {
+  padding: 0 20px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+header .navbar-brand {
+  color: #fff;
+}
+
+header .navbar-toggler {
+  background-color: #fff;
+}
+
+section {
+  margin-top: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff; /* Ensures content sections are clearly visible against the body background */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  background-color: #333;
+  color: white;
+}
+
+a {
+  color: #00f;
+}
+
+a:hover {
+  color: #3498db; /* Match hover state to header color */
+}

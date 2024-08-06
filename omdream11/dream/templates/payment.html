@@ -1,0 +1,25 @@
+<!-- templates/payment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+    <h1>Make a Payment</h1>
+    <form method="post" action="{% url 'process_payment' %}">
+        {% csrf_token %}
+        <label for="account_number">Account Number:</label>
+        <input type="text" id="account_number" name="account_number" required><br><br>
+        
+        <label for="routing_number">Routing Number:</label>
+        <input type="text" id="routing_number" name="routing_number" required><br><br>
+        
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" required><br><br>
+        
+        <button type="submit">Pay</button>
+    </form>
+</body>
+</html>

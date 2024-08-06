@@ -1,0 +1,59 @@
+/* General styling for .title and .intro */
+.title, .intro {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+/* When .show class is added, elements become visible */
+.title.show {
+    opacity: 1;
+}
+
+.intro.show {
+    opacity: 1;
+}
+
+@media (max-width: 620px) {
+    .title {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 400px;
+        width: 250px;
+        background-image: url('images/Dream11-logo.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1; /* Ensure .title is on top */
+    }
+    
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Align content to the bottom */
+        align-items: center; /* Center horizontally */
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 400px;
+        width: 250px;
+        margin: auto;
+        background-image: url('images/intro1.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: aqua;
+        box-sizing: border-box; /* Include border in element's total width and height */
+        padding-bottom: 20px; /* Add some padding at the bottom */
+        z-index: 0; /* Ensure .intro is below .title */
+    }
+      
+    .intro p {
+        background-color: aliceblue;
+        width: 80%;
+        text-align: center;
+        padding: 0 20px;
+        border-radius: 20px;
+    }
+}

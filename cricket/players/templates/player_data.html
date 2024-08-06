@@ -1,0 +1,12 @@
+{%extends "master.html"%}
+{%block title%}
+    player_data
+    {%endblock%}
+{%block content%}
+<h3>player DATA</h3>
+{% for x in player_list%}
+    <h1>{{x.firstname}}{{x.lastname}}</h1>
+   <p>phone:{{x.phone}}</p>
+   <p>joined_date:{{x.joined_date}}</p>
+   {%endfor%}
+{%endblock%}

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #61a46a;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .list-group-item {
+            background-color: #496784;
+        }
+        .list-group-item:hover {
+            background-color: #1369be;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Restaurants</h1>
+    <form method="get" class="mb-3">
+        <label for="cuisineSelect" class="form-label">Choose a cuisine:</label>
+        <select id="cuisineSelect" name="cuisine" class="form-select" onchange="this.form.submit()">
+            <option value="">All Cuisines</option>
+            {% for cuisine in cuisines %}
+            <option value="{{ cuisine }}" {% if selected_cuisine == cuisine %}selected{% endif %}>{{ cuisine }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    <div class="list-group" >
+        {% for restaurant in restaurants %}
+        <div class="list-group-item">
+            <h5>{{ restaurant.name }} - {{ restaurant.cuisine }}</h5>
+            <p>Rating: {{ restaurant.rating }} | Price Range: {{ restaurant.price_range }}</p>
+            <p>Location: {{ restaurant.location }} | Service Type: {{ restaurant.service_type }}</p>
+        </div>
+        {% empty %}
+        <div class="list-group-item">No restaurants found.</div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>

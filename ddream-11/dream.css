@@ -1,0 +1,75 @@
+/*intro*/
+/* Container to center the content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: relative; /* Position relative for absolute positioning of children */
+}
+
+/* Initial states for title and intro */
+.title, .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* When .show class is added, elements become visible */
+.title.show {
+    opacity: 1;
+    z-index: 2;
+}
+
+.intro.show {
+    opacity: 1;
+    z-index: 1;
+}
+.gotologin{
+    display: none;
+}
+.details{
+    display: none;
+}
+
+@media (max-width: 620px) and (min-width:60px) {
+    .title {
+        height: 400px;
+        width: 250px;
+        background-image: url('images/Dream11-logo.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+    }
+    
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Align content to the bottom */
+        align-items: center; /* Center horizontally */
+        height: 400px;
+        width: 250px;
+        background-image: url('images/intro1.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: aqua;
+        box-sizing: border-box; /* Include border in element's total width and height */
+        padding-bottom: 20px; /* Add some padding at the bottom */
+        z-index: 0;
+        
+    }
+      
+    .gotologin {
+      display: flex;
+      cursor: pointer;
+      width: 80%;
+      border-radius: 20px;
+      z-index: 3;
+    }
+}

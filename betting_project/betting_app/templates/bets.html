@@ -1,0 +1,37 @@
+{%load static%}
+<!-- templates/bets.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta charset="UTF-8">
+    <title>User Bets</title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'logo.png' %}" alt="Logo" style="float:left;">
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'bets' %}">Bets</a></li>
+                <li><a href="{% url 'myprofile' %}">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1>Your Bets</h1>
+        {% if bets %}
+            {% for bet in bets %}
+                <div>
+                    <h2>{{ bet.title }}</h2>
+                    <p>Description: {{ bet.description }}</p>
+                    <p>Amount: ${{ bet.amount }}</p>
+                    <p>Placed on: {{ bet.created_at|date:"D, d M Y" }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>You have not placed any bets yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

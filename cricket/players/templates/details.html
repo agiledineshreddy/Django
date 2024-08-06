@@ -1,0 +1,30 @@
+
+{%extends "master.html"%}
+{%block title%}
+Details about {{player_list.firstname}}{{player_list.lastname}}
+{%endblock%}
+
+{%block content%}
+<h1>{{player_list.firstname}}{{player_list.lastname}} Details</h1>
+<table border="3">
+<thead>
+<th>slno</th>
+<th>firstNAME</th>
+<th>lastname</th>
+<th>phone</th>
+<th>date of joined_date </th>
+</thead>
+<tbody>
+
+<tr>
+
+<td>{{player_list.id}}</td>
+<td>{{player_list.firstname}}</td>
+<td>{{player_list.lastname}}</td>
+<td>{{player_list.phone}}</td>
+<td>{{player_list.joined_date}}</td>
+</tr>
+</tbody>
+</table>
+<p>check all <a href="player/">players</a></p>
+{%endblock%}

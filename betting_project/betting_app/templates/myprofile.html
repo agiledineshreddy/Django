@@ -1,0 +1,27 @@
+{%load static%}
+<!-- templates/myprofile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'logo.png' %}" alt="Logo" style="float:left;">
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'bets' %}">Bets</a></li>
+                <li><a href="{% url 'myprofile' %}">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1>My Profile</h1>
+        <!-- Placeholder for profile information -->
+        <p>User details here...</p>
+    </div>
+</body>
+</html>

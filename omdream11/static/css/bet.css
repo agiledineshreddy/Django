@@ -1,0 +1,55 @@
+@media (max-width: 620px) and (min-width:60px) {
+    .bet{
+        display: block;
+        justify-content: space-between;
+    }
+    .nav{
+        display: flex;
+        width: 100%;
+        height: auto;
+        color: aliceblue;
+        flex-direction: column;
+        background-color: rgb(154, 31, 31);
+    }
+    .navr1{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50%;
+        justify-content: space-around;
+        gap: 40px;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .navr1 p{
+        width: 45%;
+    }
+    .navr2{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50%;
+        justify-content: space-around;
+        gap: 50px;
+        padding: 20px;
+
+    }
+    .navr2c{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navr2 a{
+        color: aliceblue;
+    }
+    .cricket{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 150px;
+        width: 100%;
+        align-items: center;
+       background-color:antiquewhite;
+     
+    }
+}

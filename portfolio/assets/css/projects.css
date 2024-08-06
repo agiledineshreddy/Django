@@ -1,0 +1,33 @@
+.navbar {
+    background-color: #3498db; /* Blue color */
+  }
+/* Style for all h1 elements within projects-container */
+#projects-container h1 {
+    background-color: lightblue; /* Change this color as needed */
+    padding: 10px;
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  /* Initial styling for project details - hidden by default within projects-container */
+  #projects-container .project-detail {
+    display: none;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid grey;
+    background-color: #f0f0f0; /* Light grey background */
+  }
+  
+  #projects-container .projects {
+    margin-left: 10px;
+    margin-top: 80px;
+  }
+  
+  #projects-container h2 {
+    background-color: #d8e0f0; /* Light blue background, adjust color as needed */
+    padding: 10px;
+    cursor: pointer; /* Indicates the element is clickable */
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
